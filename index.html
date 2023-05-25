@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(
+  90deg,
+  hsl(55deg 100% 50%) 0%,
+  hsl(40deg 100% 48%) 8%,
+  hsl(26deg 100% 45%) 17%,
+  hsl(11deg 100% 43%) 25%,
+  hsl(357deg 100% 40%) 33%,
+  hsl(342deg 100% 38%) 42%,
+  hsl(328deg 100% 35%) 50%,
+  hsl(313deg 100% 32%) 58%,
+  hsl(298deg 100% 30%) 67%,
+  hsl(284deg 100% 28%) 75%,
+  hsl(269deg 100% 25%) 83%,
+  hsl(255deg 100% 23%) 92%,
+  hsl(240deg 100% 20%) 100%
+);
+        }
+
+        .app{
+            width: 100%;
+            height:100vh;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+           
+            
+        }
+        .app div:first-child{
+            /* border: solid; */
+            width: 40%;
+            /* height:100vh; */
+            margin: auto;
+        }
+        .app h1{
+            text-transform: uppercase;
+            text-shadow: 4px 4px 2px rgb(14, 2, 2);
+            padding: 30px 0 0px;
+            letter-spacing: 50px;
+            /* text-decoration: underline solid rgba(243, 243, 243 ) 10px; */
+            font-family: Impact;
+            color: rgb(255, 255, 255);
+            /* font-size: 3rem; */
+        }
+
+        .weather-container{
+            /* background-image: url('https://cdn-icons-png.flaticon.com/128/8692/8692140.png');
+            background-repeat: no-repeat;
+            /* background-size: cover;
+            background-position: center; */
+            font-family: monospace;
+            border-radius: 40px;
+            border:5px solid  white;
+
+            width: 400px;
+            height:400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-shadow: 0 0 4px black;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly ;
+            /* align-items: ; */
+
+            box-shadow:  0 0 0px 2px   rgb(199, 199, 201) ,-10px 10px 0px 2px  rgb(172, 167, 167),
+            -20px 20px 0px 2px  rgb(172, 167, 167);
+            background-color: rgba(6, 54, 97, 0.315);
+        }
+       .weather-container p:first-of-type{
+            font-size: 5rem;
+            
+        }
+        .weather-container p:last-of-type{
+            font-size: 1.5rem;
+            font-family: Impact;
+            
+        }
+        #weather-icon img{
+            width:120px;
+        }
+
+        .search-box{
+            padding: 40px 0 50px;
+            position: relative;
+        }
+        #input{
+           
+            /* //replaced, A replaced element is a HTML element that is replaced by the content that it displays ,
+            element=content,
+            change hapen in content as element */
+            width:400px;
+            /* height: 40px;; */
+            border-radius: 20px;
+            outline: none;
+            font-size: 1.2rem;
+            color: white;
+          padding: 10px;
+            background-color: rgba(23, 5, 88, 0.774);
+            border: none;
+
+
+            box-shadow: inset 0 0  2px 3px;
+        }
+        #input:focus{
+            padding: 20px ;
+        }
+
+        #input::placeholder{
+            text-align: center;
+            color: lightgrey;
+        }
+
+        @media screen  and (max-width:900px){
+            .app{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        i{
+            position: absolute;
+            font-size: 1.2rem;
+            top: 50px;
+            left: 90px;
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+   <div class="app">
+       <div>
+            <h1>Weather</h1>
+            <div class="search-box">
+                <input autocomplete="off"
+                type="text" name="search" id="input" placeholder="Enter your location">
+                <i class="fa fa-search"></i>
+            </div>
+       </div>
+        <div class="weather-container">
+            <!-- <h2>Current Weather</h2> -->
+            <div id="weather-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/8692/8692140.png" alt="" srcset="">
+            </div>
+            <p id="temperature">25C</p>
+            <p id="condition">Haze</p>
+        </div>
+   </div>
+
+   <script src="https://kit.fontawesome.com/f595980e36.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
